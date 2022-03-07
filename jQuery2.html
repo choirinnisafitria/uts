@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label> Nama &#160;:&#160; <input type="text" id="nama" /> </label><br />
+    <label> Angka&#160;:&#160; <input type="text" id="angka" /> </label><br />
+
+    <button id="tombol">Ambil Nilai</button>
+    <textarea name="hasil" id="hasil" cols="30" rows="10"></textarea>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#tombol").click(function () {
+          var nama = $("#nama").val();
+          var angka = parseInt($("#angka").val());
+          var hasil = "";
+          for (var i = 0; i < angka; i++) {
+            hasil += nama + "\n";
+          }
+          $("#hasil").text(hasil);
+        });
+      });
+    </script>
+  </body>
+</html>
